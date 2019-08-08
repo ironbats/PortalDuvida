@@ -1,8 +1,8 @@
-runtime: java11
+runtime: java
 env: flex
 
 runtime_config:  # Optional
-  jdk: openjdk11
+  jdk: openjdk8
 
 handlers:
   - url: /.*
