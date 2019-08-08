@@ -12,9 +12,9 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter  {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/", "../static/css", "../static/images").permitAll();
+        http.authorizeRequests()
+                .antMatchers("/", "../static/css", "../static/images","../static/js").permitAll();
+        http.authorizeRequests().antMatchers("/webjars/**").permitAll();
 
         http.headers().cacheControl().disable();
 
@@ -27,7 +27,9 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter  {
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/resources/**");
         web.ignoring().antMatchers("/images/**");
+        web.ignoring().antMatchers("/js/**");
         web.ignoring().antMatchers("/*.css");
         web.ignoring().antMatchers("/*.png");
+        web.ignoring().antMatchers("/*.js");
     }
 }
