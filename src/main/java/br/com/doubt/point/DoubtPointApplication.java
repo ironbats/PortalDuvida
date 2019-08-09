@@ -22,11 +22,4 @@ public class DoubtPointApplication  {
 		SpringApplication.run(DoubtPointApplication.class, args);
 	}
 
-
-
-
-	//@Override
-	//public void addResourceHandlers(ResourceHandlerRegistry registry) {
-	//	registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-	//}
 }
